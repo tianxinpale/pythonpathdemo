@@ -67,7 +67,7 @@ vscode 也是可以学pycharm 设置PYTHONPATH的，只是不是像pycahrm那样
 ![img_3.1.png](img_3.1.png)
 
 
-## 4.演示不学习PYTHONPATH， 愚蠢的手动硬编码 sys.path
+## 4.1 演示不学习PYTHONPATH， 愚蠢的手动硬编码 sys.path
 ```
 笨瓜喜欢手动操作sys.path,然后在cmd命令，cd 到d5目录下，
 再运行 python run5.py，太笨了这样写，
@@ -77,7 +77,7 @@ vscode 也是可以学pycharm 设置PYTHONPATH的，只是不是像pycahrm那样
 ![img_4.1.png](img_4.1.png)
 
 ```
-为什么老有笨瓜喜欢在很多python脚本硬编码 sys.path.insert或者append？
+## 4.2 为什么老有笨瓜喜欢在很多python脚本硬编码 sys.path.insert或者append？
 这种人主要是不懂 PYTHONPATH的作用，造成到处手动硬编码操作sys.path。
 
 你不信去看看任意一个三方包python大神写的框架或者库，就算目录结果复杂有七八层文件夹，有谁那么愚蠢这么手动操作sys.path的？
@@ -93,7 +93,60 @@ pycahrm默认帮我们这么做了。你这么做了，那么你的代码运行�
 
 ![img_4.2.png](img_4.2.png)
 
+## 4.3 pycahrm运行代码
 
+ 如果深层级文件夹中的py文件导入其他项目中的其他模块，
+
+pycahrm将一个文件夹以项目方式打开，那么自动会把这个文件夹当做项目根目录，所以import 不会报错，如图
+
+ 
+
+如果深层级内层文件夹的py文件导入其他文件夹的模块，能导入成功，是因为pycharm自动把项目根目录加到PYTHONPATH能。因为你print(sys.path)就可以发现第0个当前脚本的所在文件夹路径，第1个是项目的根目录。
+
+主要是pycharm默认自动帮我们把项目根目录添加到了PYTHONPATH，如图中的两个勾选项，如果去掉了就会和vscode一样import报错了。
+![img_4.3.png](img_4.3.png)
+
+## 4.4 vscode运行代码
+
+使用vscode怎么办做到这pycahrm自动设置PYTHONPATH这一点呢。
+
+在项目根目录下 的 .vscode文件夹创建 launch.json（这个文件也可以在vscode界面自动生成创建）
+
+在launch.json中写上如下内容，主要是 PYTHONPATH那一行指定为你项目的根目录，本人建议直接写死为项目的绝对路径，反正你又不是每天把项目代码文件夹在磁盘上整天移来移去得，写死是最简单稳固的。
+
+ 
+
+网上别的人可能叫你这么写 ，
+
+"env": {"PYTHONPATH":"${workspaceFolder};${env:PYTHONPATH}"}，这样还行看似比较万能通用，但如果你vscode一个工作区打开多个python项目，那么就会别的python项目读取的 sys.path[1] 不是自身项目的根目录，而是第一个python项目的根目录，造成混乱，照样import报错。所以本人推荐不要写 ${workspaceFolder} 那么魔幻，在每个python项目下的 .vscode/launch.json 直接写死你每个python项目自身的根目录是最好的。
+
+ 
+
+ 
+
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: 当前文件",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "F:/coding2/distributed_framework;${env:PYTHONPATH}"
+            }
+        }
+    ]
+}
+![img_4.4.png](img_4.4.png)
+使用ctrl + f5 运行代码可以自动先读取运行launch.json里面的配置，如果你在代码编辑区右键点击运行在终端中运行由于不先读取launch.json的配置，所以仍然报错，
+
+所以需要ctrl+f5运行（或者点击vscode的顶部的运行按钮，以非调试模式运行）。
 
 ## 5 在win和linux，cmd和shell一句话怎么运行两条命令
 
