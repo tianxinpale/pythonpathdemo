@@ -39,7 +39,7 @@ d4/d5/run.py 里面导入和运行fun3函数
 ```
 
 ## 2. 演示pyachrm完美运行，cmd和vscode报错
-![](https://img2020.cnblogs.com/blog/1108990/202111/1108990-20211119103852120-953934616.png)
+![img.png](img.png)
 
 截图可以看出，在pycahrm运行run5.py正确调用fun3函数，在cmd命令行却不行，vscode也不行。
 
