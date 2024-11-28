@@ -45,7 +45,7 @@ d4/d5/run.py 里面导入和运行fun3函数
 
 主要原因是pycahrm自动把项目根目录加到了 PYTHONPATH，如下图你把这两个勾选去掉就pycahrm运行run5.py也会和cmd命令行一样报错。
 
-![](https://img2020.cnblogs.com/blog/1108990/202111/1108990-20211119104028204-1581286624.png)
+![img_2.2.png](img_2.2.png)
 
 
 
@@ -65,7 +65,7 @@ linux是：     export  PYTHONPATH=项目根目录 ; python run.py,
 vscode 也是可以学pycharm 设置PYTHONPATH的，只是不是像pycahrm那样默认自动添加，所以pycahrm专业ide就是比vscode好。
 自己百度vscode PYTHONPATH 关键字。
 ```
-![](https://img2020.cnblogs.com/blog/1108990/202111/1108990-20211119104340305-1438114681.png)
+![img_3.1.png](img_3.1.png)
 
 
 ## 4.演示不学习PYTHONPATH， 愚蠢的手动硬编码 sys.path
