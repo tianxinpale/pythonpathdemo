@@ -48,7 +48,6 @@ d4/d5/run.py 里面导入和运行fun3函数
 ![img_2.2.png](img_2.2.png)
 
 
-
 ## 3. 演示在cmd命令行设置临时会话环境变量 PYTHONPATH 后运行完美
 ```
 如果在cmd窗口会话中临时设置PYTHONPATH为项目根目录再运行run5.py就不会报错了。
@@ -75,7 +74,7 @@ vscode 也是可以学pycharm 设置PYTHONPATH的，只是不是像pycahrm那样
 如果别的文件夹层级有run6.py   run7.py,一个个脚本硬编码sys.path改到猴年马月。
 ```
 
-![](https://img2020.cnblogs.com/blog/1108990/202111/1108990-20211119104757875-1491247839.png)
+![img_4.1.png](img_4.1.png)
 
 ```
 为什么老有笨瓜喜欢在很多python脚本硬编码 sys.path.insert或者append？
@@ -92,7 +91,7 @@ pycahrm默认帮我们这么做了。你这么做了，那么你的代码运行�
 
 如果你的项目有有几百个深层级目录下的脚本都可以做为运行起点被直接python xx.py 启动，你为了cmd运行正常，一个一个的脚本里面加sys.path.insert加到口吐鲜血。
 
-[![Txasbj.md.png](https://s4.ax1x.com/2022/01/06/Txasbj.md.png)](https://imgtu.com/i/Txasbj)
+![img_4.2.png](img_4.2.png)
 
 
 
