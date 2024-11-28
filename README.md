@@ -202,7 +202,7 @@ export PYTHONPATH=/codes/proj1:/codes/proj2
 这样当nb_log修改代码时候，并不需要把nb_log打包到pypi，然后安装到python目录下，pycahrm的这个功能非常的方便
 如果在linux下就使用 PYTHONPATH 设置两个文件夹的方式就行了。
 ```
-[![Tx8jBt.md.png](https://s4.ax1x.com/2022/01/06/Tx8jBt.md.png)](https://imgtu.com/i/Tx8jBt)
+![img_1.png](img_1.png)
 
 
 ## 9 妙用 PYTHONPATH 达到非常方便的多个项目复用公司通用代码库的目的，暴击打包上传pypi再安装
