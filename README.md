@@ -2,11 +2,17 @@
 
 这个readme要认真看，里面说明了pythonath的作用，
 
-第2、3 章 说明了为什么复杂深层级项目的代码在pycharm导入和运行完美，在cmd或者shell下import不到导致报错的例子。
+第1章 解释了python 中 import 一个模块,python是怎么个查找顺序的。python import abcd,是从哪里去找abcd这个包或模块的。
+
+第2、3 章 说明了为什么复杂深层级项目的代码在pycharm导入和运行完美，在cmd或者vscode shell下import不到导致报错的例子。在pycahrm运行run5.py正确调用fun3函数，在cmd命令行却不行，vscode也不行。因为Pycharm 可以通过Alt + Enter（visual studio快捷键下），自动导入包。主要原因是pycahrm自动把项目根目录加到了 PYTHONPATH，如下图你把这两个勾选去掉就pycahrm运行run5.py也会和cmd命令行一样报错。
 
 第6章还重点解释了永久性环境变量和临时环境变量的重大影响范围的区别
 
 第7章说明了任何项目如果设置了 PYTHONPATH 的4大好处
+安装pyenv解决对python环境管理上的难点，轻松地在多个版本的 Python 之间切换并自动配置环境变量。提供对每个项目的 Python 版本的支持https://github.com/pyenv/pyenv
+pyenv作者直接声明Windows系统都不算服务器servers，Pyenv 不正式支持 Windows，并且不能在 Linux 的 Windows 子系统之外的 Windows 中运行。此外，即使在那里，它安装的 Python 也不是本地 Windows 版本，而是在虚拟机中运行的 Linux 版本 - 因此您将无法获得特定于 Windows 的功能。
+
+不要在Windows系统安装GitHub上依赖python之类需要编译的软件，会有一大堆依赖报错。
 
 第9章说明了设置 PYTHONPATH 达到多个项目复用公司公共工具类代码的妙用
 
