@@ -3,6 +3,7 @@
 这个readme要认真看，里面说明了pythonath的作用，
 
 第1章 解释了python 中 import 一个模块,python是怎么个查找顺序的。python import abcd,是从哪里去找abcd这个包或模块的。
+https://bic-berkeley.github.io/psych-214-fall-2016/sys_path.html
 
 第2、3 章 说明了为什么复杂深层级项目的代码在pycharm导入和运行完美，在cmd或者vscode shell下import不到导致报错的例子。在pycahrm运行run5.py正确调用fun3函数，在cmd命令行却不行，vscode也不行。因为Pycharm 可以通过Alt + Enter（visual studio快捷键下），自动导入包。主要原因是pycahrm自动把项目根目录加到了 PYTHONPATH，如下图你把这两个勾选去掉就pycahrm运行run5.py也会和cmd命令行一样报错。
 
