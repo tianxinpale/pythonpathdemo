@@ -76,8 +76,9 @@ vscode 也是可以学pycharm 设置PYTHONPATH的，只是不是像pycahrm那样
 
 ![img_4.1.png](img_4.1.png)
 
-```
 ## 4.2 为什么老有笨瓜喜欢在很多python脚本硬编码 sys.path.insert或者append？
+
+```
 这种人主要是不懂 PYTHONPATH的作用，造成到处手动硬编码操作sys.path。
 
 你不信去看看任意一个三方包python大神写的框架或者库，就算目录结果复杂有七八层文件夹，有谁那么愚蠢这么手动操作sys.path的？
@@ -119,11 +120,7 @@ pycahrm将一个文件夹以项目方式打开，那么自动会把这个文件�
 网上别的人可能叫你这么写 ，
 
 "env": {"PYTHONPATH":"${workspaceFolder};${env:PYTHONPATH}"}，这样还行看似比较万能通用，但如果你vscode一个工作区打开多个python项目，那么就会别的python项目读取的 sys.path[1] 不是自身项目的根目录，而是第一个python项目的根目录，造成混乱，照样import报错。所以本人推荐不要写 ${workspaceFolder} 那么魔幻，在每个python项目下的 .vscode/launch.json 直接写死你每个python项目自身的根目录是最好的。
-
- 
-
- 
-
+```
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
@@ -143,6 +140,7 @@ pycahrm将一个文件夹以项目方式打开，那么自动会把这个文件�
         }
     ]
 }
+```
 ![img_4.4.png](img_4.4.png)
 使用ctrl + f5 运行代码可以自动先读取运行launch.json里面的配置，如果你在代码编辑区右键点击运行在终端中运行由于不先读取launch.json的配置，所以仍然报错，
 
