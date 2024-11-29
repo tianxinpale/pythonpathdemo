@@ -113,11 +113,11 @@ pycahrm将一个文件夹以项目方式打开，那么自动会把这个文件�
 
 在项目根目录下 的 .vscode文件夹创建 launch.json（这个文件也可以在vscode界面自动生成创建）
 
-在launch.json中写上如下内容，主要是 PYTHONPATH那一行指定为你项目的根目录，本人建议直接写死为项目的绝对路径，反正你又不是每天把项目代码文件夹在磁盘上整天移来移去得，写死是最简单稳固的。
+在launch.json中写上如下内容，主要是 PYTHONPATH那一行指定为你项目的根目录，不要设置永久固定系统环境变量
 
  
 
-网上别的人可能叫你这么写 ，
+临时设置环境变量
 
 "env": {"PYTHONPATH":"${workspaceFolder};${env:PYTHONPATH}"}，这样还行看似比较万能通用，但如果你vscode一个工作区打开多个python项目，那么就会别的python项目读取的 sys.path[1] 不是自身项目的根目录，而是第一个python项目的根目录，造成混乱，照样import报错。所以本人推荐不要写 ${workspaceFolder} 那么魔幻，在每个python项目下的 .vscode/launch.json 直接写死你每个python项目自身的根目录是最好的。
 ```
