@@ -1,3 +1,5 @@
+https://www.bilibili.com/video/BV1p3DVY6E5A
+
 # 用一个python项目文件夹结构说明掌握 PYTHONPATH作用的重要性
 
 这个readme要认真看，里面说明了pythonath的作用，
