@@ -80,6 +80,7 @@ win10/11的pwoershell是  $env:PYTHONPATH=项目根目录 & python run.py
 ```
 vscode 也是可以学pycharm 设置PYTHONPATH的，只是不是像pycahrm那样默认自动添加，所以pycahrm专业ide就是比vscode好。
 自己百度vscode PYTHONPATH 关键字。
+Types of Python environments
 https://code.visualstudio.com/docs/python/environments
 ![img_3.1.png](img_3.1.png)
 
