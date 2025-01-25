@@ -52,9 +52,12 @@ d4/d5/run.py 里面导入和运行fun3函数
 
 ## 3. 演示在cmd命令行设置local environment临时会话环境变量 PYTHONPATH 后运行完美或者设置 Virtual Environment（virtualenv、Conda、pyenv）
 
-如果在cmd窗口会话中临时设置PYTHONPATH为项目根目录再运行run5.py就不会报错了。
-
+如果在cmd窗口会话中临时设置PYTHONPATH、javapath、phppath等为项目根目录再运行run5.py就不会报错了。
+不要愚蠢的去硬编码 sys.path.insert或者append
 注意要在代码运行前临时设置环境变量，不要设置永久固定系统环境变量，因为你不可能只有一个python项目，一般每个人最少有七八个python项目吧。
+Java虚拟环境（JVM），Java 的 JDK 多版本管理（JEnv、SDKMAN、Jabba）
+如果在vscode插件扩展市场安装了Red Hat“Language support for Java ™ for Visual Studio Code”报错“Java 23 or more recent is required to run the Java extension. Please download and install a recent JDK. You can still compile your projects with older JDKs by configuring ['java.configuration.runtimes'](https://github.com/redhat-developer/vscode-java/wiki/JDK-Requirements#java.configuration.runtimes)”
+Python虚拟环境：virtualenv（pip官方推荐）、pyenv、Conda、venv
 ```
 找出当前路径：echo "$PATH"或printf "%s\n" "$PATH"
 ```
