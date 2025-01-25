@@ -50,7 +50,7 @@ d4/d5/run.py 里面导入和运行fun3函数
 ![img_2.2.png](img_2.2.png)
 
 
-## 3. 演示在cmd命令行设置临时会话环境变量 PYTHONPATH 后运行完美
+## 3. 演示在cmd命令行设置local environment临时会话环境变量 PYTHONPATH 后运行完美或者设置 Virtual Environment（virtualenv、Conda、pyenv）
 
 如果在cmd窗口会话中临时设置PYTHONPATH为项目根目录再运行run5.py就不会报错了。
 
@@ -93,7 +93,7 @@ https://code.visualstudio.com/docs/python/environments
 
 ![img_4.1.png](img_4.1.png)
 
-## 4.2 为什么老有笨瓜喜欢在很多python脚本硬编码 sys.path.insert或者append？
+## 4.2 为什么老有笨瓜喜欢在很多python脚本硬编码 sys.path.insert或者append？global environment
 
 ```
 这种人主要是不懂 PYTHONPATH的作用，造成到处手动硬编码操作sys.path。
