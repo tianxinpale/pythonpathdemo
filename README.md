@@ -72,11 +72,15 @@ set（csh / tcsh）
 ```
 ```
 linux的Terminal终端： export PYTHONPATH=项目根目录 ; python run.py,
+export JAVA_HOME=/usr/local/java
+export PATH=$ JAVA_HOME/bin:$ PATH
+export CLASSPATH=.: $ JAVA_HOME/lib/dt.jar: $ JAVA_HOME/lib/tools.jar
 ```
 ```
 widows传统cmd是：     set PYTHONPATH=项目根目录 & python run.py
 win10/11的pwoershell是  $env:PYTHONPATH=项目根目录 & python run.py   
 (win的cmd和powershell设置会话级临时环境变量的语法是不一样的，pycharm终端中两者都可以，有个设置，如果win+pycharm不确定是哪种语法，可以两种加环境变量的语法都执行一下。)
+
 ```
 vscode 也是可以学pycharm 设置PYTHONPATH的，只是不是像pycahrm那样默认自动添加，所以pycahrm专业ide就是比vscode好。
 自己百度vscode PYTHONPATH 关键字。
