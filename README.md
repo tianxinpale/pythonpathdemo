@@ -55,11 +55,15 @@ d4/d5/run.py 里面导入和运行fun3函数
 如果在cmd窗口会话中临时设置PYTHONPATH为项目根目录再运行run5.py就不会报错了。
 
 注意要在代码运行前临时设置环境变量，不要设置永久固定系统环境变量，因为你不可能只有一个python项目，一般每个人最少有七八个python项目吧。
-https://www.cyberciti.biz/faq/unix-linux-adding-path
 ```
 找出当前路径：echo "$PATH"或printf "%s\n" "$PATH"
+```
 在UNIX / Linux下设置路径的语法用set还是export取决于您的 login shell类型
+https://www.cyberciti.biz/faq/unix-linux-adding-path
+```
 export（BASH/ksh/sh）设置local environment直接用命令或脚本，用于设置当前cmd窗口中的环境变量，只在当前cmd窗口有效。global environment是把同样的命令写入系统文件再保存，修改sh和ksh shell的/etc/profile文件或bash shell的~/.bashrc隐藏的文件。
+```
+```
 set（csh / tcsh）设置local environment直接用命令或脚本，用于设置当前cmd窗口中的环境变量，只在当前cmd窗口有效。global environment是把同样的命令写入系统文件再保存，修改~/.cshrc隐藏的文件。
 ```
 
