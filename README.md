@@ -61,10 +61,12 @@ d4/d5/run.py 里面导入和运行fun3函数
 在UNIX / Linux下设置路径的语法用set还是export取决于您的 login shell类型
 https://www.cyberciti.biz/faq/unix-linux-adding-path
 ```
-export（BASH/ksh/sh）设置local environment直接用命令或脚本，用于设置当前cmd窗口中的环境变量，只在当前cmd窗口有效。global environment是把同样的命令写入系统文件再保存，修改sh和ksh shell的/etc/profile文件或bash shell的~/.bashrc隐藏的文件。
+export（BASH/ksh/sh）
+设置global environment是把同样的命令写入系统文件再保存，修改sh和ksh shell的/etc/profile文件或bash shell的~/.bashrc隐藏的文件。local environment直接用命令或脚本，用于设置当前cmd窗口中的环境变量，只在当前cmd窗口有效。
 ```
 ```
-set（csh / tcsh）设置local environment直接用命令或脚本，用于设置当前cmd窗口中的环境变量，只在当前cmd窗口有效。global environment是把同样的命令写入系统文件再保存，修改~/.cshrc隐藏的文件。
+set（csh / tcsh）
+设置global environment是把同样的命令写入系统文件再保存，修改~/.cshrc隐藏的文件。local environment直接用命令或脚本，用于设置当前cmd窗口中的环境变量，只在当前cmd窗口有效。
 ```
 ```
 linux的Terminal终端： export  PYTHONPATH=项目根目录 ; python run.py,
