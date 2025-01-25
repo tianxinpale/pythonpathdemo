@@ -51,28 +51,29 @@ d4/d5/run.py 里面导入和运行fun3函数
 
 
 ## 3. 演示在cmd命令行设置临时会话环境变量 PYTHONPATH 后运行完美
-```
+
 如果在cmd窗口会话中临时设置PYTHONPATH为项目根目录再运行run5.py就不会报错了。
 
 注意要在代码运行前临时设置环境变量，不要设置永久固定系统环境变量，因为你不可能只有一个python项目，一般每个人最少有七八个python项目吧。
-
+https://www.cyberciti.biz/faq/unix-linux-adding-path
+```
 找出当前路径：echo "$PATH"或printf "%s\n" "$PATH"
 在UNIX / Linux下设置路径的语法用set还是export取决于您的 login shell类型
 export（BASH/ksh/sh）设置local environment直接用命令或脚本，用于设置当前cmd窗口中的环境变量，只在当前cmd窗口有效。global environment是把同样的命令写入系统文件再保存，修改sh和ksh shell的/etc/profile文件或bash shell的~/.bashrc隐藏的文件。
 set（csh / tcsh）设置local environment直接用命令或脚本，用于设置当前cmd窗口中的环境变量，只在当前cmd窗口有效。global environment是把同样的命令写入系统文件再保存，修改~/.cshrc隐藏的文件。
-https://www.cyberciti.biz/faq/unix-linux-adding-path
+```
 
-如果嫌敲击两次命令麻烦，一句命令行可以运行多个命令，
+
+如果嫌敲击两次命令麻烦，一句命令行可以运行多个命令
+```
 linux的Terminal终端： export  PYTHONPATH=项目根目录 ; python run.py,
 widows传统cmd是：     set PYTHONPATH=项目根目录 & python run.py
 win10/11的pwoershell是  $env:PYTHONPATH=项目根目录 & python run.py   
 (win的cmd和powershell设置会话级临时环境变量的语法是不一样的，pycharm终端中两者都可以，有个设置，如果win+pycharm不确定是哪种语法，可以两种加环境变量的语法都执行一下。)
-
-
+```
 vscode 也是可以学pycharm 设置PYTHONPATH的，只是不是像pycahrm那样默认自动添加，所以pycahrm专业ide就是比vscode好。
 自己百度vscode PYTHONPATH 关键字。
 https://code.visualstudio.com/docs/python/environments
-```
 ![img_3.1.png](img_3.1.png)
 
 
