@@ -66,11 +66,10 @@ export（BASH/ksh/sh）设置local environment直接用命令或脚本，用于�
 ```
 set（csh / tcsh）设置local environment直接用命令或脚本，用于设置当前cmd窗口中的环境变量，只在当前cmd窗口有效。global environment是把同样的命令写入系统文件再保存，修改~/.cshrc隐藏的文件。
 ```
-
-
-如果嫌敲击两次命令麻烦，一句命令行可以运行多个命令
 ```
 linux的Terminal终端： export  PYTHONPATH=项目根目录 ; python run.py,
+```
+```
 widows传统cmd是：     set PYTHONPATH=项目根目录 & python run.py
 win10/11的pwoershell是  $env:PYTHONPATH=项目根目录 & python run.py   
 (win的cmd和powershell设置会话级临时环境变量的语法是不一样的，pycharm终端中两者都可以，有个设置，如果win+pycharm不确定是哪种语法，可以两种加环境变量的语法都执行一下。)
